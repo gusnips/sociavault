@@ -6592,7 +6592,11 @@ export interface operations {
         hashtag: string;
         /** @description Only return posts Google indexed within this recent window. */
         date_posted?:
-          "last-hour" | "last-day" | "last-week" | "last-month" | "last-year";
+          | "last-hour"
+          | "last-day"
+          | "last-week"
+          | "last-month"
+          | "last-year";
         /** @description Use `all` to search public posts and reels, or `reels` to return only reels. Defaults to `all`. */
         media_type?: "all" | "reels";
         /** @description Cursor from the previous response. Here it is the next Google results page number. */
@@ -8750,10 +8754,19 @@ export interface operations {
           | "video_views";
         /** @description Video duration filter. */
         duration?:
-          "under_10s" | "10_20s" | "20_30s" | "30_40s" | "40_50s" | "over_50s";
+          | "under_10s"
+          | "10_20s"
+          | "20_30s"
+          | "30_40s"
+          | "40_50s"
+          | "over_50s";
         /** @description Likes percentile filter. */
         likes?:
-          "top_1_20" | "top_21_40" | "top_41_60" | "top_61_80" | "top_81_100";
+          | "top_1_20"
+          | "top_21_40"
+          | "top_41_60"
+          | "top_61_80"
+          | "top_81_100";
         /** @description Ad format filter. */
         ad_format?: "spark_ads" | "non_spark_ads";
         /** @description Ad language filter. */
@@ -9161,7 +9174,11 @@ export interface operations {
         query: string;
         /** @description Filter results by how recently they were posted (based on Google-indexed results) */
         date_posted?:
-          "last-hour" | "last-day" | "last-week" | "last-month" | "last-year";
+          | "last-hour"
+          | "last-day"
+          | "last-week"
+          | "last-month"
+          | "last-year";
         /** @description Pagination cursor from the previous response. Must be between 1 and 11; cursor 12 or greater returns a 400 response. */
         cursor?: number;
       };
@@ -10382,7 +10399,12 @@ export interface operations {
         status?: "ALL" | "ACTIVE" | "INACTIVE";
         /** @description Media type of the ad. Defaults to ALL. Meme just means the ad has text and an image. No clue why they call it meme. */
         media_type?:
-          "ALL" | "IMAGE" | "VIDEO" | "MEME" | "IMAGE_AND_MEME" | "NONE";
+          | "ALL"
+          | "IMAGE"
+          | "VIDEO"
+          | "MEME"
+          | "IMAGE_AND_MEME"
+          | "NONE";
         /** @description Impressions start date. Needs to be in YYYY-MM-DD format. */
         start_date?: string;
         /** @description Impressions end date. Needs to be in YYYY-MM-DD format. */
@@ -10501,7 +10523,12 @@ export interface operations {
         status?: "ALL" | "ACTIVE" | "INACTIVE";
         /** @description Media type of the ad. Defaults to ALL. Meme refers to ads with image and text. Not sure why they call it meme. */
         media_type?:
-          "ALL" | "IMAGE" | "VIDEO" | "MEME" | "IMAGE_AND_MEME" | "NONE";
+          | "ALL"
+          | "IMAGE"
+          | "VIDEO"
+          | "MEME"
+          | "IMAGE_AND_MEME"
+          | "NONE";
         /** @description Language to filter ads on. Needs to be 2 letter language code, ie EN, ES, FR, etc */
         language?: string;
         /** @description Start date to search for. Format: YYYY-MM-DD */
@@ -14307,7 +14334,11 @@ export interface operations {
         region?: string;
         /** @description Filter results by how recently they were posted */
         date_posted?:
-          "last-hour" | "last-day" | "last-week" | "last-month" | "last-year";
+          | "last-hour"
+          | "last-day"
+          | "last-week"
+          | "last-month"
+          | "last-year";
         /** @description Page number to retrieve, for paginating through results. Must be between 1 and 11. Use the next-page indicator in the response to walk pages; each page is a separate request and costs 1 credit. */
         page?: number;
       };
